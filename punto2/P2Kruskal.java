@@ -1,4 +1,6 @@
+package punto2;
 import java.util.*;
+
 public class P2Kruskal {
 
     public static int algoritmoKruskal(Map<Integer, List<Arista>> grafo) {

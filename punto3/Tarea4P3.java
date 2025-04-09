@@ -1,8 +1,9 @@
+package punto3;
 import java.util.*;
 
 public class Tarea4P3 {
 
-    public static boolean esBipartito(Map<Integer, List<Arista>> grafo) {
+    public static List<Set<Integer>> esBipartito(Map<Integer, List<Arista>> grafo) {
 
         Set<Integer> nodosRojos = new HashSet<>();
         Set<Integer> nodosAzules = new HashSet<>();
@@ -90,9 +91,13 @@ public class Tarea4P3 {
 
 
             
-        
+        List<Set<Integer>> retorno = new ArrayList<>();
+        if (dobleColor) {
+            retorno.add(nodosAzules);
+            retorno.add(nodosRojos);
 
-        return !dobleColor;
+        }
+        return retorno;
     }
 
     public static Map<Integer, List<Arista>> construirGrafo(String[] input){
@@ -137,9 +142,38 @@ public class Tarea4P3 {
             String[] input = scanner.nextLine().split(" ");
             Map<Integer, List<Arista>> grafo = construirGrafo(input);
 
-            boolean respuesta = esBipartito(grafo);
+            List<Set<Integer>> respuesta = esBipartito(grafo);
 
-            System.out.println(respuesta);
+            if (respuesta.isEmpty()) {
+                System.out.println("False");
+            }
+
+            else{
+                String imprimir = "True {";
+                Set<Integer> azules = respuesta.get(0);
+                Set<Integer> rojos = respuesta.get(1);
+
+                String strAzules = "";
+                for (Integer nodo:azules){
+                    strAzules += Integer.toString(nodo) + ",";
+                }
+                strAzules = strAzules.substring(0,strAzules.length()-1);
+                imprimir+= strAzules +"} {";
+
+                String strRojos = "";
+                for (Integer nodo:rojos){
+                    strRojos += Integer.toString(nodo) + ",";
+                }
+                strRojos = strRojos.substring(0,strRojos.length()-1);
+                imprimir+= strRojos +"}";
+
+                System.out.println(imprimir);
+
+
+
+            }
+
+            
 
             
         }
