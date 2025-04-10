@@ -10,7 +10,7 @@ public class GeneracionCasosPrueba {
     private static int MINNODES = 10;
     private static int MAXWEIGHTMST = 100;
     private static int MAXWEIGHTGENERAL = 1000;
-    private static int MAWADDITIONALEDGES = 25000;
+    private static int MAXADDITIONALEDGES = 25000;
 
     public static String[] generarArchivo() {
         String[] retorno = new String[2];
@@ -90,7 +90,7 @@ public class GeneracionCasosPrueba {
             String respuestaEsperada = String.format("%d"+aristas + "\n", pesoTotal);
             respuestaString += respuestaEsperada;
 
-            int aristasAdicionales = Math.min(generadorAleatorio.nextInt(maxAristas), MAWADDITIONALEDGES);
+            int aristasAdicionales = Math.min(generadorAleatorio.nextInt(maxAristas), MAXADDITIONALEDGES);
 
             node1 = 0;
             while (aristasAdicionales>0 && node1<n) {
