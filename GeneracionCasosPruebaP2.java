@@ -131,24 +131,24 @@ public class GeneracionCasosPruebaP2 {
         String casosPrueba = respuesta[0];
         String respuestaEsperada = respuesta[1];
         try {
-            FileWriter writer = new FileWriter("pruebaPrim.IN");
+            FileWriter writer = new FileWriter("pruebaMST.IN");
             writer.write(Integer.toString(NUMCASOS));
             writer.write("\n");
             writer.write(casosPrueba);
             writer.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Archivo de prueba generado correctamente");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Ocurrio un error al generar el archivo de prueba");
             e.printStackTrace();
         }
 
         try {
-            FileWriter writer = new FileWriter("respuestaEsperadaPrim.txt");
+            FileWriter writer = new FileWriter("respuestaEsperadaMST.txt");
             writer.write(respuestaEsperada);
             writer.close();
-            System.out.println("Successfully wrote to the file.");
+            System.out.println("Archivo de prueba generado correctamente");
         } catch (IOException e) {
-            System.out.println("An error occurred.");
+            System.out.println("Ocurrio un error al generar el archivo de prueba");
             e.printStackTrace();
         }
     
