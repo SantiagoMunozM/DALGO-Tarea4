@@ -1,4 +1,4 @@
-package punto2;
+
 import java.util.*;
 
 public class P2Prim {

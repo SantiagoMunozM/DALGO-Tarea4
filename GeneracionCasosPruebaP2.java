@@ -1,9 +1,9 @@
-package punto2;
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
 
-public class GeneracionCasosPrueba {
+public class GeneracionCasosPruebaP2 {
     
     private static int NUMCASOS = 100;
     private static int MAXNODES = 1000;
