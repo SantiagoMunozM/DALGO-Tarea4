@@ -405,7 +405,7 @@ public class GeneracionCasosPruebaP3 {
         String casosPrueba = respuesta[0];
         String respuestaEsperada = respuesta[1];
         try {
-            FileWriter writer = new FileWriter("punto3/pruebaBipartito.IN");
+            FileWriter writer = new FileWriter("pruebaBipartito.IN");
             writer.write(Integer.toString(NUMCASOS));
             writer.write("\n");
             writer.write(casosPrueba);
@@ -417,7 +417,7 @@ public class GeneracionCasosPruebaP3 {
         }
 
         try {
-            FileWriter writer = new FileWriter("punto3/respuestaEsperadaBipartito.txt");
+            FileWriter writer = new FileWriter("respuestaEsperadaBipartito.txt");
             writer.write(respuestaEsperada);
             writer.close();
             System.out.println("Successfully wrote to the file.");

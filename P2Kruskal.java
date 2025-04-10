@@ -32,9 +32,6 @@ public class P2Kruskal {
 
                 union(nodoRaiz, numHijos, raiz1, raiz2);
                 aristasIncluidas.add(arista);
-
-
-
             }
 
             indArista ++;
