@@ -38,7 +38,7 @@ public class P2Prim {
         while (nodosVisitados.size() < grafo.length){
             int nodoOrigenMenorPeso = -1;
             int nodoDestinoMenorPeso = -1;
-            int menorPeso = Integer.MAX_VALUE;
+            int menorPeso = INF;
 
             //recorremos distancia para buscar la arista de menor peso entre el MST y un nodo no visitado
             //esto toma n (v) operaciones

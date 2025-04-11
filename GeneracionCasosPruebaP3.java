@@ -8,7 +8,7 @@ public class GeneracionCasosPruebaP3 {
     private static int MAXNODES = 1000;
     private static int MINNODES = 10;
     private static int MAXWEIGHT = 100;
-    private static int MAXADDITIONALEDGES = 2000;
+    private static int MAXADDITIONALEDGES = 4000;
 
     public static String[] generarGrafoBipartito () {
 

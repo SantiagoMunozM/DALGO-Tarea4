@@ -40,7 +40,7 @@ public class GeneracionCasosPruebaP2 {
 
             int pesoTotal = 0;
 
-            int maxAristas = n*n -n;
+            int maxAristas = (n*n -n)/2;
 
             int node1 = generadorAleatorio.nextInt(n);
             int node2 = generadorAleatorio.nextInt(n);
